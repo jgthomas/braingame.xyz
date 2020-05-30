@@ -1,0 +1,22 @@
+version: "3"
+services:
+  backend:
+    build:
+      context: ./brain-game-backend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - ./brain-game-backend:/app
+  frontend:
+    build:
+      context: ./brain-game-frontend
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /app/node_modules
+      - ./brain-game-frontend:/app
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8080:80"
