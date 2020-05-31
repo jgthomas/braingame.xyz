@@ -1,5 +1,5 @@
 
-from flask import Flask, request
+from flask import Flask
 from flask_restful import Resource, Api
 
 
@@ -7,10 +7,10 @@ def create_app():
     app = Flask(__name__)
     api = Api(app)
 
-    class Prediction(Resource):
+    class Dumber(Resource):
         def get(self):
-            return {"prediction": 100}
+            return {'dumb': 'dumb'}
 
-    api.add_resource(Prediction, "/prediction")
+    api.add_resource(Dumber, '/dumber')
 
     return app

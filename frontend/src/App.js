@@ -1,8 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  const [greeting, setGreeting] = useState("nothing came!");
+
+  useEffect(() => {
+    fetch("/backend/dumber")
+      .then((res) => res.json())
+      .then((data) => {
+        setGreeting(data.dumb);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +31,7 @@ function App() {
         >
           Learn React
         </a>
+        <p>I AM: {greeting}</p>
       </header>
     </div>
   );
