@@ -18,10 +18,6 @@ jobs:
     - language: node_js
       name: client
       node_js: node
-      before_install:
-        - cd frontend
-      install:
-        - yarn global add codecov
       cache:
         directories:
           - node_modules
