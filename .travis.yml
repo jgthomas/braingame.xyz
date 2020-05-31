@@ -36,3 +36,14 @@ jobs:
         - docker push codeactor/braingamexyz_nginx
         - docker push codeactor/braingamexyz_backend
         - docker push codeactor/braingamexyz_frontend
+    - stage: aws-deploy
+      if: branch = master
+      deploy:
+        provider: elasticbeanstalk
+        region: "eu-west-1"
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        app: "gameplay"
+        env: "Gameplay-env"
+        bucket: "elasticbeanstalk-eu-west-1-344323818187"
+        bucket_path: "GamePlay"
