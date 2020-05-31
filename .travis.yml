@@ -4,7 +4,7 @@ dist: xenial
 jobs:
   include:
     - language: python
-      name: api
+      name: server
       python: 3.8
       before_install:
         - cd backend
