@@ -13,6 +13,7 @@ services:
     volumes:
       - /app/node_modules
       - ./frontend:/app
+    stdin_open: true
   nginx:
     restart: always
     build:
