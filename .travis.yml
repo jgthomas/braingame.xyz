@@ -1,0 +1,32 @@
+language: generic
+os: linux
+dist: xenial
+jobs:
+  include:
+    - language: python
+      name: api
+      python: 3.8
+      before_install:
+        - cd backend
+      install:
+        - pip install poetry
+        - poetry install
+      script:
+        - poetry run pytest -s ./tests
+      after_success:
+        - codecov
+    - language: node_js
+      name: client
+      node_js: node
+      before_install:
+        - cd frontend
+      install:
+        - yarn global add codecov
+      cache:
+        directories:
+          - node_modules
+        timeout: 3
+      script:
+        - yarn install
+        - yarn test
+        - yarn run build
