@@ -2,17 +2,17 @@ version: "3"
 services:
   backend:
     build:
-      context: ./brain-game-backend
+      context: ./backend
       dockerfile: Dockerfile.dev
     volumes:
-      - ./brain-game-backend:/app
+      - ./backend:/app
   frontend:
     build:
-      context: ./brain-game-frontend
+      context: ./frontend
       dockerfile: Dockerfile.dev
     volumes:
       - /app/node_modules
-      - ./brain-game-frontend:/app
+      - ./frontend:/app
   nginx:
     restart: always
     build:

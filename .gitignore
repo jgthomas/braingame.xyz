@@ -95,15 +95,15 @@ ENV/
 # REACT
 
 # dependencies
-/brain-game-frontend/node_modules
-/brain-game-frontend/.pnp
+/frontend/node_modules
+/frontend/.pnp
 .pnp.js
 
 # testing
-/brain-game-frontend/coverage
+/frontend/coverage
 
 # production
-/brain-game-frontend/build
+/frontend/build
 
 # misc
 .DS_Store

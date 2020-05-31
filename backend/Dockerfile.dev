@@ -12,6 +12,6 @@ RUN pip --no-cache-dir install poetry poetry-setup \
 
 EXPOSE 5000
 
-WORKDIR /app/brain-game-backend
+WORKDIR /app/backend
 
 CMD ["python", "app_dev.py"]
