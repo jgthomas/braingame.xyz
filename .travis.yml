@@ -4,7 +4,7 @@ dist: xenial
 jobs:
   include:
     - language: python
-      name: server
+      name: backend
       python: 3.8
       before_install:
         - cd backend
@@ -14,8 +14,10 @@ jobs:
       script:
         - poetry run pytest -s ./tests
     - language: node_js
-      name: client
+      name: frontend
       node_js: node
+      before-install:
+        - cd frontend
       cache:
         directories:
           - node_modules
