@@ -13,8 +13,6 @@ jobs:
         - poetry install
       script:
         - poetry run pytest -s ./tests
-      after_success:
-        - codecov
     - language: node_js
       name: client
       node_js: node
