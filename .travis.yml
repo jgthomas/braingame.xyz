@@ -13,6 +13,8 @@ jobs:
         - poetry install
       script:
         - poetry run pytest -s ./tests
+        - poetry run black --check ./backend
+        - poetry run flake8 ./backend
     - language: node_js
       name: frontend
       node_js: node
