@@ -9,6 +9,8 @@ python = "^3.8"
 flask = "^1.1.2"
 flask-restful = "^0.3.8"
 waitress = "^1.4.3"
+cachetools = "^4.1.0"
+pyfunctory = {git = "https://github.com/jgthomas/pyfunctory"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

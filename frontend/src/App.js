@@ -3,13 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const [greeting, setGreeting] = useState("nothing came!");
+  const [word, setWord] = useState("nothing came!");
 
   useEffect(() => {
-    fetch("/backend/dumber")
+    fetch("/backend/anagram")
       .then((res) => res.json())
       .then((data) => {
-        setGreeting(data.dumb);
+        setWord(data.word);
       })
       .catch((error) => {
         console.error(error);
@@ -31,7 +31,7 @@ function App() {
         >
           Learn React
         </a>
-        <p>I AM: {greeting}</p>
+        <p>Anagram word: {word}</p>
       </header>
     </div>
   );
