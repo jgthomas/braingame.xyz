@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Resource, Api
 
-from backend.load_words import anagram_word
+from backend.anagram import anagram_word
 
 
 def create_app():
