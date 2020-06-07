@@ -1,17 +1,7 @@
-import random
 from flask import Flask
 from flask_restful import Resource, Api
-from cachetools import cached, LRUCache
 
-from pyfunctory.process import load_data
-
-
-cache = LRUCache(maxsize=100)
-
-
-@cached(cache)
-def load_words():
-    return load_data("static/wordlist/nine_letter_words.txt")
+from backend.load_words import anagram_word
 
 
 def create_app():
@@ -20,9 +10,7 @@ def create_app():
 
     class Anagram(Resource):
         def get(self):
-            words = load_words()
-            word = random.choice(words)
-            return {"word": word}
+            return {"word": anagram_word()}
 
     api.add_resource(Anagram, "/anagram")
 
