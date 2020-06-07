@@ -17,14 +17,14 @@ def load_common_words():
     return load_words(COMMON_WORDS)
 
 
-def load_all_nine_letter_words():
+def load_nine_letter_words():
     return load_words(NINE_LETTER_WORDS)
 
 
 @cached(cache)
 def load_words(filename):
     with open(filename) as f:
-        return [line for line in f]
+        return [word.strip() for word in f if word]
 
 
 def load_common_words_by_length():
