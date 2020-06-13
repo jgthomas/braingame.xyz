@@ -10,7 +10,8 @@ def create_app():
 
     class Anagram(Resource):
         def get(self):
-            return {"word": anagram_word_by_length(6)}
+            anagram, solutions = anagram_word_by_length(6)
+            return {"word": anagram, "solutions": solutions}
 
     api.add_resource(Anagram, "/anagram")
 

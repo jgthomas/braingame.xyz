@@ -3,7 +3,7 @@ import Anagram from "./Anagram";
 import "./App.css";
 
 function App() {
-  const [word, setWord] = useState("nothing came!");
+  const [word, setWord] = useState("");
 
   useEffect(() => {
     fetch("/backend/anagram")
