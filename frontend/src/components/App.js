@@ -1,26 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Anagram from "./Anagram";
 import "./App.css";
 
-function App() {
-  const [word, setWord] = useState("");
-
-  useEffect(() => {
-    fetch("/backend/anagram")
-      .then((res) => res.json())
-      .then((data) => {
-        setWord(data.word);
-      })
-      .catch((error) => {
-        console.error(error);
-      });
-  }, []);
-
+const App = () => {
   return (
     <div className="App">
-      <Anagram anagram={word} />
+      <Anagram />
     </div>
   );
-}
+};
 
 export default App;
