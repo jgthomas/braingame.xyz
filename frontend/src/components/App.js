@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Anagram from "./Anagram";
 import "./App.css";
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      <p>Anagram word: {word}</p>
+      <Anagram anagram={word} />
     </div>
   );
 }
