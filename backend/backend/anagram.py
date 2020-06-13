@@ -1,5 +1,5 @@
 import random
-from pyfunctory.compounds import can_be_made
+from pyfunctory.compounds import exact_match
 from pyfunctory.factories import make_partial
 from backend.load_words import load_common_words, load_common_words_by_length
 
@@ -25,5 +25,5 @@ def shuffle_anagram(word):
 
 
 def anagram_answers(word, word_list):
-    is_anagram = make_partial(can_be_made, word)
-    return [w for w in word_list if is_anagram(w, exact_match=True)]
+    is_anagram = make_partial(exact_match, word)
+    return [w for w in word_list if is_anagram(w)]
