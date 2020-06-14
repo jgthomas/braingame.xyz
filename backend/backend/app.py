@@ -1,7 +1,7 @@
 from flask import Flask
 from flask_restful import Resource, Api
 
-from backend.anagram import anagram_word_by_length
+from backend.anagram import anagram_puzzle
 
 
 def create_app():
@@ -10,7 +10,7 @@ def create_app():
 
     class Anagram(Resource):
         def get(self):
-            anagram, solutions = anagram_word_by_length(6)
+            anagram, solutions = anagram_puzzle(6)
             return {"word": anagram, "solutions": solutions}
 
     api.add_resource(Anagram, "/anagram")
