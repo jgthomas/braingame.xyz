@@ -11,12 +11,14 @@ const Anagram = () => {
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
   const [skipCount, setSkipCount] = useState(0);
+  const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
     fetch(`/backend/anagram?length=${length}`)
       .then((res) => res.json())
       .then((data) => {
         setShowAnswer(false);
+        setDisabled(false);
         setAnagram(data.word);
         setSolutions(data.solutions);
       })
@@ -36,6 +38,7 @@ const Anagram = () => {
 
   const displaySolution = () => {
     setShowAnswer(true);
+    setDisabled(true);
   };
 
   const showNextAnagram = () => {
@@ -45,7 +48,11 @@ const Anagram = () => {
   return (
     <div className="anagramDisplay">
       <h2>{anagram}</h2>
-      <GuessForm solutions={solutions} incrementScore={incrementScore} />
+      <GuessForm
+        solutions={solutions}
+        incrementScore={incrementScore}
+        disabled={disabled}
+      />
       <Score score={score} />
       <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />
       <button onClick={displaySolution}>Give Up</button>
