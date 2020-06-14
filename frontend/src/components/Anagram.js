@@ -1,23 +1,32 @@
 import React, { useState, useEffect } from "react";
+import GuessForm from "./GuessForm";
 
 const Anagram = () => {
-  const [length] = useState(9);
+  const [length] = useState(6);
   const [anagram, setAnagram] = useState("");
+  const [solutions, setSolutions] = useState([]);
+  const [score, setScore] = useState(0);
 
   useEffect(() => {
     fetch(`/backend/anagram?length=${length}`)
       .then((res) => res.json())
       .then((data) => {
         setAnagram(data.word);
+        setSolutions(data.solutions);
       })
       .catch((error) => {
         console.error(error);
       });
-  }, [length]);
+  }, [length, score]);
+
+  const incrementScore = () => {
+    setScore(score + 1);
+  };
 
   return (
     <div className="anagramDisplay">
       <p>Anagram word: {anagram}</p>
+      <GuessForm solutions={solutions} incrementScore={incrementScore} />
     </div>
   );
 };
