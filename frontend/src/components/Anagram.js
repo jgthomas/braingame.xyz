@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import GuessForm from "./GuessForm";
+import Score from "./Score";
 
 const Anagram = () => {
   const [length] = useState(6);
@@ -27,6 +28,7 @@ const Anagram = () => {
     <div className="anagramDisplay">
       <p>Anagram word: {anagram}</p>
       <GuessForm solutions={solutions} incrementScore={incrementScore} />
+      <Score score={score} />
     </div>
   );
 };
