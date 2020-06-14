@@ -27,8 +27,12 @@ def load_words(filename):
         return [word.strip() for word in f if word]
 
 
-def load_common_words_by_length():
+def load_common_by_length():
     return load_words_by_length(COMMON_WORDS)
+
+
+def load_all_by_length():
+    return load_words_by_length(DICTIONARY)
 
 
 @cached(cache)
