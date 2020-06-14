@@ -44,7 +44,7 @@ const Anagram = () => {
 
   return (
     <div className="anagramDisplay">
-      <p>Anagram word: {anagram}</p>
+      <h2>{anagram}</h2>
       <GuessForm solutions={solutions} incrementScore={incrementScore} />
       <Score score={score} />
       <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />

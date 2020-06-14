@@ -1,11 +1,11 @@
 import React from "react";
-import Anagram from "./Anagram";
+import AnagramGame from "./AnagramGame";
 import "./App.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Anagram />
+      <AnagramGame />
     </div>
   );
 };
