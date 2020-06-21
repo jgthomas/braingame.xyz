@@ -45,7 +45,7 @@ jobs:
         region: "eu-west-1"
         access_key_id: $AWS_ACCESS_KEY_ID
         secret_access_key: $AWS_SECRET_ACCESS_KEY
-        app: "gameplay"
-        env: "Gameplay-env"
+        app: "aws_eb_envs"
+        env: "aws-eb-envs-dev"
         bucket: "elasticbeanstalk-eu-west-1-344323818187"
-        bucket_path: "GamePlay"
+        bucket_path: "aws_eb_envs"
