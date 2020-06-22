@@ -4,6 +4,7 @@ import Score from "./Score";
 import LengthSelector from "./LengthSelector";
 import Answers from "./Answers";
 import ActionButton from "./ActionButton";
+import "./Anagram.css";
 
 const Anagram = () => {
   const [length, setLength] = useState(6);
@@ -47,8 +48,8 @@ const Anagram = () => {
   };
 
   return (
-    <div className="anagramDisplay">
-      <h2>{anagram}</h2>
+    <div className="anagram">
+      <p class="Anagram-word">{anagram}</p>
       <GuessForm
         solutions={solutions}
         incrementScore={incrementScore}
