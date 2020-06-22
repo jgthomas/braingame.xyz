@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders learn react link", () => {
   const { getByText } = render(<App />);
-  const anagramElement = getByText(/Anagram/i);
+  const anagramElement = getByText(/Anagram length/i);
   expect(anagramElement).toBeInTheDocument();
 });
