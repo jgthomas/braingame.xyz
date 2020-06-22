@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./GuessForm.css";
 
 const GuessForm = ({ solutions, incrementScore, disabled }) => {
   const checkAnswer = (event) => {

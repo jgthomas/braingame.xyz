@@ -5,6 +5,10 @@ button {
   margin-top: 2em;
 }
 
+button::-moz-focus-inner {
+  border: 0;
+}
+
 .game-button {
   background-color: cornflowerblue;
   color: white;
