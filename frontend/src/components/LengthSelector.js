@@ -12,9 +12,9 @@ const LengthSelector = ({ minLength, maxLength, changeLength }) => {
   };
 
   return (
-    <div>
+    <div class="selector">
       <form>
-        <label>Anagram length </label>
+        <label class="selector-text selector-title">Length </label>
         <input
           name="lengthPicker"
           data-testid="lengthInput"
@@ -26,7 +26,7 @@ const LengthSelector = ({ minLength, maxLength, changeLength }) => {
           max={maxLength}
           required
         />
-        <output>{length}</output>
+        <output class="selector-text"> {length}</output>
       </form>
     </div>
   );

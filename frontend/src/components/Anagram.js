@@ -49,6 +49,7 @@ const Anagram = () => {
 
   return (
     <div className="anagram">
+      <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />
       <p class="Anagram-word">{anagram}</p>
       <GuessForm
         solutions={solutions}
@@ -56,7 +57,6 @@ const Anagram = () => {
         disabled={disabled}
       />
       <Score score={score} />
-      <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />
       <ActionButton label="Give Up" action={displaySolution} />
       <ActionButton label="Next Word" action={showNextAnagram} />
       {showAnswer ? <Answers answers={solutions} /> : null}

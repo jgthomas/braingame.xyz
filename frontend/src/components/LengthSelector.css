@@ -1,3 +1,16 @@
 input[type="range"]::-moz-focus-outer {
   border: 0;
 }
+
+.selector {
+  margin-top: 1em;
+}
+
+.selector-title {
+  display: block;
+}
+
+.selector-text {
+  color: darkslategrey;
+  font-size: 1em;
+}
