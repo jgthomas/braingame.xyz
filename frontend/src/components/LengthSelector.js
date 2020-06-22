@@ -1,22 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "./LengthSelector.css";
 
 const LengthSelector = ({ minLength, maxLength, changeLength }) => {
+  const [length, setLength] = useState(maxLength - minLength);
+
+  const setNewLength = (event) => {
+    const newLength = event.target.value;
+    setLength(newLength);
+    changeLength(newLength);
+  };
+
   return (
     <div>
       <form>
         <label>Anagram length </label>
         <input
-          data-testid="widthInput"
-          onChange={(e) => changeLength(e.target.value)}
-          type="number"
+          name="lengthPicker"
+          data-testid="lengthInput"
+          onChange={setNewLength}
+          type="range"
           step="1"
-          defaultValue={maxLength - minLength}
+          defaultValue={length}
           min={minLength}
           max={maxLength}
-          name="petalWidth"
           required
         />
+        <output>{length}</output>
       </form>
     </div>
   );
