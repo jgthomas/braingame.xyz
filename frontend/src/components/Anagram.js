@@ -48,18 +48,28 @@ const Anagram = () => {
   };
 
   return (
-    <div className="anagram">
-      <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />
-      <p class="Anagram-word">{anagram}</p>
-      <GuessForm
-        solutions={solutions}
-        incrementScore={incrementScore}
-        disabled={disabled}
-      />
-      <Score score={score} />
-      <ActionButton label="Give Up" action={displaySolution} />
-      <ActionButton label="Next Word" action={showNextAnagram} />
-      {showAnswer ? <Answers answers={solutions} /> : null}
+    <div className="anagram-layout">
+      <div>
+        <LengthSelector
+          maxLength={9}
+          minLength={4}
+          changeLength={changeLength}
+        />
+        <ActionButton label="Give Up" action={displaySolution} />
+        <ActionButton label="Next Word" action={showNextAnagram} />
+      </div>
+      <div>
+        <p class="Anagram-word">{anagram}</p>
+        <GuessForm
+          solutions={solutions}
+          incrementScore={incrementScore}
+          disabled={disabled}
+        />
+        {showAnswer ? <Answers answers={solutions} /> : null}
+      </div>
+      <div>
+        <Score score={score} />
+      </div>
     </div>
   );
 };
