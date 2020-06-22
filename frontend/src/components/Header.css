@@ -1,7 +1,10 @@
 .App-header {
   background-color: cornflowerblue;
+  margin-top: 0;
 }
 
 .Game-title {
   color: cornsilk;
+  font-size: 2.5em;
+  margin-top: 0;
 }
