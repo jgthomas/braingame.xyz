@@ -3,6 +3,7 @@ import GuessForm from "./GuessForm";
 import Score from "./Score";
 import LengthSelector from "./LengthSelector";
 import Answers from "./Answers";
+import ActionButton from "./ActionButton";
 
 const Anagram = () => {
   const [length, setLength] = useState(6);
@@ -55,8 +56,8 @@ const Anagram = () => {
       />
       <Score score={score} />
       <LengthSelector maxLength={9} minLength={4} changeLength={changeLength} />
-      <button onClick={displaySolution}>Give Up</button>
-      <button onClick={showNextAnagram}>Next Word</button>
+      <ActionButton label="Give Up" action={displaySolution} />
+      <ActionButton label="Next Word" action={showNextAnagram} />
       {showAnswer ? <Answers answers={solutions} /> : null}
     </div>
   );
