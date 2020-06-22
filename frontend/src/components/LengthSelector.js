@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 const LengthSelector = ({ minLength, maxLength, changeLength }) => {
   const lengths = Array.from(Array(maxLength + 1).keys()).filter(
@@ -19,6 +20,12 @@ const LengthSelector = ({ minLength, maxLength, changeLength }) => {
   };
 
   return <select onChange={setNewLength}>{optionsList}</select>;
+};
+
+LengthSelector.propTypes = {
+  minLength: PropTypes.number,
+  maxLength: PropTypes.number,
+  changeLength: PropTypes.func,
 };
 
 export default LengthSelector;
