@@ -1,3 +1,5 @@
 .anagram-game {
-  background-color: cornsilk;
+  display: grid;
+  grid-template-rows: 5em 1fr;
+  height: 100vh;
 }
