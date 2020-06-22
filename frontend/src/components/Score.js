@@ -1,8 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./Score.css";
 
 const Score = ({ score }) => {
-  return <p>Score: {score}</p>;
+  return <p class="score-count">{score}</p>;
 };
 
 Score.propTypes = {
