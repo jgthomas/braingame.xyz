@@ -59,17 +59,12 @@ const Anagram = () => {
   return (
     <div className="anagram-layout">
       <div>
-        <LengthSelector
-          maxLength={9}
-          minLength={4}
-          changeLength={changeLength}
-        />
+        <ActionButton label="Next" action={showNextAnagram} />
         <ActionButton
-          label="Give Up"
+          label="Answer"
           action={displaySolution}
           disabled={disabled}
         />
-        <ActionButton label="Next Word" action={showNextAnagram} />
       </div>
       <div>
         <p class="Anagram-word">{anagram}</p>
@@ -77,6 +72,11 @@ const Anagram = () => {
           solutions={solutions}
           incrementScore={incrementScore}
           disabled={disabled}
+        />
+        <LengthSelector
+          maxLength={9}
+          minLength={4}
+          changeLength={changeLength}
         />
         {showAnswer ? <Answers answers={solutions} /> : null}
       </div>

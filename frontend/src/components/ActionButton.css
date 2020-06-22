@@ -4,3 +4,19 @@ button {
   margin-right: auto;
   margin-top: 2em;
 }
+
+.game-button {
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 2em;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  width: 5em;
+  height: 2.25em;
+  border-radius: 5%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  text-decoration: none;
+}

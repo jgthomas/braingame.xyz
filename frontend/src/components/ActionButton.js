@@ -4,7 +4,11 @@ import "./ActionButton.css";
 
 const ActionButton = ({ label, action, disabled }) => {
   return (
-    <button onClick={action} disabled={disabled ? disabled : false}>
+    <button
+      class="game-button"
+      onClick={action}
+      disabled={disabled ? disabled : false}
+    >
       {label}
     </button>
   );
