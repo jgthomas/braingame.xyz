@@ -2,6 +2,13 @@
   background-color: cornsilk;
 }
 
+.anagram-layout {
+  background-color: cornsilk;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
 .Anagram-word {
   letter-spacing: 0.0625em;
   font-size: 2em;
