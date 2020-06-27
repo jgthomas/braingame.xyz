@@ -3,9 +3,9 @@ import "./Header.css";
 
 const Header = ({ gameName }) => {
   return (
-    <div class="App-header">
-      <p class="Game-title">{gameName}</p>
-    </div>
+    <header>
+      <p class="game-title">{gameName}</p>
+    </header>
   );
 };
 
