@@ -8,6 +8,8 @@ import "./Anagram.css";
 
 const Anagram = () => {
   const defaultLength = 6;
+  const tick = "\u2713";
+  const cross = "\u2717";
 
   const [length, setLength] = useState(defaultLength);
   const [anagram, setAnagram] = useState("");
@@ -93,8 +95,8 @@ const Anagram = () => {
         {showAnswer ? <Answers answers={solutions} /> : null}
       </div>
       <div class="scores">
-        <Counter value={score} colorClass="score" />
-        <Counter value={passCount} colorClass="pass" />
+        <Counter value={score} colorClass="score" title={tick} />
+        <Counter value={passCount} colorClass="pass" title={cross} />
       </div>
     </div>
   );

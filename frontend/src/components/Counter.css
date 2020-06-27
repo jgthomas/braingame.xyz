@@ -4,12 +4,12 @@
   margin-right: auto;
 }
 
-.score {
-  color: olivedrab;
+.counter-title {
+  font-size: 1em;
 }
 
-.skipped {
-  color: sandybrown;
+.score {
+  color: olivedrab;
 }
 
 .pass {
