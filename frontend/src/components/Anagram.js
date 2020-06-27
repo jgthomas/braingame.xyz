@@ -8,19 +8,16 @@ import "./Anagram.css";
 
 const Anagram = () => {
   const defaultLength = 6;
-  const startScore = 0;
-  const startSkipCount = 0;
-  const startContinueCount = 0;
 
   const [length, setLength] = useState(defaultLength);
   const [anagram, setAnagram] = useState("");
   const [solutions, setSolutions] = useState([]);
-  const [score, setScore] = useState(startScore);
+  const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [skipCount, setSkipCount] = useState(startSkipCount);
+  const [skipCount, setSkipCount] = useState(0);
   const [passCount, setPassCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
-  const [continues, setContinues] = useState(startContinueCount);
+  const [continues, setContinues] = useState(0);
   const [fetches, triggerFetch] = useState(0);
 
   useEffect(() => {
