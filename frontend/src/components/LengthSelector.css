@@ -67,7 +67,7 @@ input[type="range"]::-moz-range-track {
 }
 
 .selector-value {
-  font-size: 2.5em;
+  font-size: 3em;
 }
 
 .selector-max-min {
