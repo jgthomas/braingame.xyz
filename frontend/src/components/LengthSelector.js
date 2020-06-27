@@ -31,7 +31,7 @@ const LengthSelector = ({
           max={maxLength}
           required
         />
-        <output class="selector-text"> {length}</output>
+        <output class="selector-text"> {currentLength}</output>
       </form>
     </div>
   );

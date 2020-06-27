@@ -7,7 +7,9 @@ import Counter from "./Counter";
 import "./Anagram.css";
 
 const Anagram = () => {
-  const [length, setLength] = useState(6);
+  const defaultLength = 6;
+
+  const [length, setLength] = useState(defaultLength);
   const [anagram, setAnagram] = useState("");
   const [solutions, setSolutions] = useState([]);
   const [score, setScore] = useState(0);
@@ -35,11 +37,16 @@ const Anagram = () => {
     setScore(score + 1);
   };
 
-  const changeLength = (newLength) => {
-    setLength(newLength);
+  const resetGame = () => {
     setScore(0);
     setSkipCount(0);
     setPassCount(0);
+    setLength(defaultLength);
+  };
+
+  const changeLength = (newLength) => {
+    resetGame();
+    setLength(newLength);
   };
 
   const displaySolution = () => {
@@ -65,6 +72,7 @@ const Anagram = () => {
           action={displaySolution}
           disabled={disabled}
         />
+        <ActionButton label="Reset" action={resetGame} />
       </div>
       <div class="anagram">
         <p class="anagram-word">{anagram}</p>
