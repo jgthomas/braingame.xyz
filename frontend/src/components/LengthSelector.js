@@ -16,7 +16,11 @@ const LengthSelector = ({
   return (
     <div class="selector">
       <form>
-        <label class="selector-text selector-title">Word Length </label>
+        <label class="selector-text selector-title">Current Word Length</label>
+        <div>
+          <output class="selector-text selector-value"> {currentLength}</output>
+        </div>
+        <output class="selector-text selector-max-min">{minLength} </output>
         <input
           name="lengthPicker"
           data-testid="lengthInput"
@@ -29,7 +33,7 @@ const LengthSelector = ({
           max={maxLength}
           required
         />
-        <output class="selector-text selector-value"> {currentLength}</output>
+        <output class="selector-text selector-max-min"> {maxLength}</output>
       </form>
     </div>
   );
