@@ -2,3 +2,7 @@
   color: tomato;
   font-size: 1.5em;
 }
+
+.hidden-answers {
+  visibility: hidden;
+}

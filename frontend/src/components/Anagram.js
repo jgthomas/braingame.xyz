@@ -86,13 +86,13 @@ const Anagram = () => {
           incrementScore={incrementScore}
           disabled={disabled}
         />
+        <Answers answers={solutions} showAnswers={showAnswer} />
         <LengthSelector
           maxLength={9}
           minLength={4}
           currentLength={length}
           changeLength={changeLength}
         />
-        {showAnswer ? <Answers answers={solutions} /> : null}
       </div>
       <div class="scores">
         <Counter value={score} colorClass="score" title={tick} />
