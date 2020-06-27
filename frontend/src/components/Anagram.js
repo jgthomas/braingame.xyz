@@ -76,6 +76,7 @@ const Anagram = () => {
         <LengthSelector
           maxLength={9}
           minLength={4}
+          currentLength={length}
           changeLength={changeLength}
         />
         {showAnswer ? <Answers answers={solutions} /> : null}
