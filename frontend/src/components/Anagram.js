@@ -58,7 +58,7 @@ const Anagram = () => {
 
   return (
     <div className="game-layout">
-      <div>
+      <div class="controls">
         <ActionButton label="Next" action={showNextAnagram} />
         <ActionButton
           label="Answer"
@@ -66,7 +66,7 @@ const Anagram = () => {
           disabled={disabled}
         />
       </div>
-      <div>
+      <div class="anagram">
         <p class="anagram-word">{anagram}</p>
         <GuessForm
           solutions={solutions}
@@ -81,7 +81,7 @@ const Anagram = () => {
         />
         {showAnswer ? <Answers answers={solutions} /> : null}
       </div>
-      <div>
+      <div class="scores">
         <Counter value={score} colorClass="score" />
         <Counter value={skipCount} colorClass="skipped" />
         <Counter value={passCount} colorClass="pass" />

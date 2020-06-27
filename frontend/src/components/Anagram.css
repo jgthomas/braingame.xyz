@@ -2,6 +2,19 @@
   background-color: cornsilk;
   display: grid;
   grid-template-columns: 300px 1fr 300px;
+  grid-template-areas: "scores anagram controls";
+}
+
+.game-layout > .controls {
+  grid-area: controls;
+}
+
+.game-layout > .anagram {
+  grid-area: anagram;
+}
+
+.game-layout > .scores {
+  grid-area: scores;
 }
 
 .anagram-word {
