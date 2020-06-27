@@ -9,7 +9,7 @@ button::-moz-focus-inner {
 }
 
 .game-button {
-  background-color: cornflowerblue;
+  background-color: lightslategrey;
   color: white;
   font-size: 1.5em;
   text-decoration: none;
@@ -22,6 +22,12 @@ button::-moz-focus-inner {
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
+}
+
+@media (hover: hover) {
+  .game-button:hover:enabled {
+    background-color: cornflowerblue;
+  }
 }
 
 @media only screen and (max-width: 730px) {
