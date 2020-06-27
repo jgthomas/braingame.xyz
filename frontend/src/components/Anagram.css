@@ -1,14 +1,10 @@
-.anagram {
-  background-color: cornsilk;
-}
-
-.anagram-layout {
+.game-layout {
   background-color: cornsilk;
   display: grid;
   grid-template-columns: 300px 1fr 300px;
 }
 
-.Anagram-word {
+.anagram-word {
   letter-spacing: 0.0625em;
   font-size: 3em;
   color: cornflowerblue;

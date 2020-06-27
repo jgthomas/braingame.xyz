@@ -1,13 +1,13 @@
 import React from "react";
 import Anagram from "./Anagram";
 import Header from "./Header";
-import "./AnagramGame.css";
+import "./Game.css";
 
 const AnagramGame = () => {
   const gameName = "Anagram";
 
   return (
-    <div class="anagram-game">
+    <div class="game">
       <Header gameName={gameName} />
       <Anagram />
     </div>

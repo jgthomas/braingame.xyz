@@ -57,7 +57,7 @@ const Anagram = () => {
   };
 
   return (
-    <div className="anagram-layout">
+    <div className="game-layout">
       <div>
         <ActionButton label="Next" action={showNextAnagram} />
         <ActionButton
@@ -67,7 +67,7 @@ const Anagram = () => {
         />
       </div>
       <div>
-        <p class="Anagram-word">{anagram}</p>
+        <p class="anagram-word">{anagram}</p>
         <GuessForm
           solutions={solutions}
           incrementScore={incrementScore}

@@ -1,4 +1,4 @@
-.anagram-game {
+.game {
   display: grid;
   grid-template-rows: 5em 1fr;
   height: 100vh;
@@ -7,10 +7,10 @@
     "game";
 }
 
-.anagram-game > header {
+.game > header {
   grid-area: header;
 }
 
-.anagram-game .anagram-layout {
+.game .game-layout {
   grid-area: game;
 }
