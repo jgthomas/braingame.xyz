@@ -11,7 +11,7 @@ button::-moz-focus-inner {
 .game-button {
   background-color: cornflowerblue;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   text-decoration: none;
   outline: none;
   border: none;
@@ -22,4 +22,10 @@ button::-moz-focus-inner {
   margin-left: auto;
   margin-right: auto;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 730px) {
+  .game-button {
+    font-size: 1em;
+  }
 }

@@ -31,22 +31,29 @@
   color: cornflowerblue;
 }
 
-@media only screen and (max-width: 730px) {
+@media only screen and (max-width: 900px) {
   .game-layout {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr 0.5fr;
     grid-template-areas:
-      "scores"
       "anagram"
+      "scores"
       "controls";
-  }
-
-  .game-layout > .anagram {
-    justify-content: flex-start;
   }
 
   .game-layout > .scores {
     flex-direction: row;
     justify-content: flex-start;
+  }
+
+  .game-layout > .anagram {
+    justify-items: center;
+    align-items: center;
+  }
+
+  .game-layout > .controls {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 }

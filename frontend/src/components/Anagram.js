@@ -42,6 +42,7 @@ const Anagram = () => {
     setSkipCount(0);
     setPassCount(0);
     setLength(defaultLength);
+    setShowAnswer(false);
   };
 
   const changeLength = (newLength) => {
