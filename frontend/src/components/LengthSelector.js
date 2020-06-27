@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "./LengthSelector.css";
 
@@ -8,11 +8,8 @@ const LengthSelector = ({
   currentLength,
   changeLength,
 }) => {
-  const [length, setLength] = useState(currentLength);
-
   const setNewLength = (event) => {
     const newLength = event.target.value;
-    setLength(newLength);
     changeLength(newLength);
   };
 
@@ -27,6 +24,7 @@ const LengthSelector = ({
           type="range"
           step="1"
           defaultValue={currentLength}
+          value={currentLength}
           min={minLength}
           max={maxLength}
           required
