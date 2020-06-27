@@ -7,9 +7,11 @@ import Counter from "./Counter";
 import "./Anagram.css";
 
 const Anagram = () => {
-  const defaultLength = 6;
+  const defaultLength = 7;
   const tick = "\u2713";
   const cross = "\u2717";
+  const minWordLength = 5;
+  const maxWordLength = 12;
 
   const [length, setLength] = useState(defaultLength);
   const [anagram, setAnagram] = useState("");
@@ -88,8 +90,8 @@ const Anagram = () => {
         />
         <Answers answers={solutions} showAnswers={showAnswer} />
         <LengthSelector
-          maxLength={9}
-          minLength={4}
+          maxLength={maxWordLength}
+          minLength={minWordLength}
           currentLength={length}
           changeLength={changeLength}
         />
