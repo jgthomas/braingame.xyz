@@ -9,5 +9,4 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border: 2px solid cornflowerblue;
-  border-radius: 2%;
 }
