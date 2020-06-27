@@ -7,18 +7,46 @@
 
 .game-layout > .controls {
   grid-area: controls;
+  display: flex;
+  flex-direction: column;
 }
 
 .game-layout > .anagram {
   grid-area: anagram;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
 }
 
 .game-layout > .scores {
   grid-area: scores;
+  display: flex;
+  flex-direction: column;
 }
 
 .anagram-word {
   letter-spacing: 0.0625em;
   font-size: 3em;
   color: cornflowerblue;
+}
+
+@media only screen and (max-width: 730px) {
+  .game-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 1fr;
+    grid-template-areas:
+      "scores"
+      "anagram"
+      "controls";
+  }
+
+  .game-layout > .anagram {
+    justify-content: flex-start;
+  }
+
+  .game-layout > .scores {
+    flex-direction: row;
+    justify-content: flex-start;
+  }
 }
