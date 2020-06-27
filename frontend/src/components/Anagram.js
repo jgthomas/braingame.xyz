@@ -97,7 +97,6 @@ const Anagram = () => {
       </div>
       <div class="scores">
         <Counter value={score} colorClass="score" />
-        <Counter value={skipCount} colorClass="skipped" />
         <Counter value={passCount} colorClass="pass" />
       </div>
     </div>
