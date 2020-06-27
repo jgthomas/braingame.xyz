@@ -8,16 +8,20 @@ import "./Anagram.css";
 
 const Anagram = () => {
   const defaultLength = 6;
+  const startScore = 0;
+  const startSkipCount = 0;
+  const startContinueCount = 0;
 
   const [length, setLength] = useState(defaultLength);
   const [anagram, setAnagram] = useState("");
   const [solutions, setSolutions] = useState([]);
-  const [score, setScore] = useState(0);
+  const [score, setScore] = useState(startScore);
   const [showAnswer, setShowAnswer] = useState(false);
-  const [skipCount, setSkipCount] = useState(0);
+  const [skipCount, setSkipCount] = useState(startSkipCount);
   const [passCount, setPassCount] = useState(0);
   const [disabled, setDisabled] = useState(false);
-  const [continues, setContinues] = useState(0);
+  const [continues, setContinues] = useState(startContinueCount);
+  const [fetches, triggerFetch] = useState(0);
 
   useEffect(() => {
     fetch(`/backend/anagram?length=${length}`)
@@ -31,18 +35,19 @@ const Anagram = () => {
       .catch((error) => {
         console.error(error);
       });
-  }, [length, score, skipCount, continues]);
+  }, [length, score, skipCount, continues, fetches]);
 
   const incrementScore = () => {
     setScore(score + 1);
   };
 
   const resetGame = () => {
+    setLength(defaultLength);
     setScore(0);
     setSkipCount(0);
     setPassCount(0);
-    setLength(defaultLength);
     setShowAnswer(false);
+    triggerFetch(fetches + 1);
   };
 
   const changeLength = (newLength) => {
