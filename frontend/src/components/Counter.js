@@ -16,9 +16,9 @@ const Counter = ({ value, status, title }) => {
   };
 
   return (
-    <p class={`counter ${setStyleOnStatus(status)}`}>
+    <div class={`counter ${setStyleOnStatus(status)}`}>
       {title} {value}
-    </p>
+    </div>
   );
 };
 
