@@ -11,7 +11,7 @@ button::-moz-focus-inner {
 .game-button {
   background-color: lightslategrey;
   color: white;
-  font-size: 1.5em;
+  font-size: 1em;
   text-decoration: none;
   outline: none;
   border: none;
@@ -24,14 +24,22 @@ button::-moz-focus-inner {
   text-decoration: none;
 }
 
+/*
+ Effects for mouse-driven interfaces
+*/
+
 @media (hover: hover) {
   .game-button:hover:enabled {
     background-color: cornflowerblue;
   }
 }
 
-@media only screen and (max-width: 730px) {
+/*
+ Adjust for larger screens
+*/
+
+@media only screen and (min-width: 730px) {
   .game-button {
-    font-size: 1em;
+    font-size: 1.5em;
   }
 }
