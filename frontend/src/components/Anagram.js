@@ -4,6 +4,7 @@ import LengthSelector from "./LengthSelector";
 import Answers from "./Answers";
 import ActionButton from "./ActionButton";
 import Counter from "./Counter";
+import Status from "./Status";
 import "./Anagram.css";
 
 const Anagram = () => {
@@ -98,8 +99,8 @@ const Anagram = () => {
         />
       </div>
       <div class="scores">
-        <Counter value={score} colorClass="score" title={tick} />
-        <Counter value={passCount} colorClass="pass" title={cross} />
+        <Counter value={score} colorClass={Status.GOOD} title={tick} />
+        <Counter value={passCount} colorClass={Status.BAD} title={cross} />
       </div>
     </div>
   );
