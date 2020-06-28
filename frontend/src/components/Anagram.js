@@ -4,6 +4,7 @@ import LengthSelector from "./LengthSelector";
 import Answers from "./Answers";
 import ActionButton from "./ActionButton";
 import Counter from "./Counter";
+import Word from "./Word";
 import Status from "./Status";
 import "./Anagram.css";
 
@@ -84,7 +85,7 @@ const Anagram = () => {
         <ActionButton label="Reset" action={resetGame} />
       </div>
       <div class="anagram">
-        <p class="anagram-word">{anagram}</p>
+        <Word word={anagram} />
         <GuessForm
           solutions={solutions}
           incrementScore={incrementScore}

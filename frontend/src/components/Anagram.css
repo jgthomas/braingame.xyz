@@ -25,12 +25,6 @@
   flex-direction: column;
 }
 
-.anagram-word {
-  letter-spacing: 0.0625em;
-  font-size: 3em;
-  color: dodgerblue;
-}
-
 @media only screen and (max-width: 900px) {
   .game-layout {
     grid-template-columns: 1fr;
@@ -56,9 +50,5 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-  }
-
-  .anagram-word {
-    font-size: 2.5em;
   }
 }
