@@ -1,5 +1,5 @@
 import React from "react";
-import AnagramGame from "./AnagramGame";
+import AnagramGame from "../AnagramGame/AnagramGame";
 import "./App.css";
 
 const App = () => {

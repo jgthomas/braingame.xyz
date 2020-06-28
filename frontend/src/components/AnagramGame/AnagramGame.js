@@ -1,6 +1,6 @@
 import React from "react";
-import Anagram from "./Anagram";
-import Header from "./Header";
+import Anagram from "../Anagram/Anagram";
+import Header from "../Header/Header";
 import "./Game.css";
 
 const AnagramGame = () => {

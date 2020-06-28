@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import GuessForm from "./GuessForm";
-import LengthSelector from "./LengthSelector";
-import Answers from "./Answers";
-import ActionButton from "./ActionButton";
-import Counter from "./Counter/Counter";
-import Word from "./Word/Word";
-import Status from "./Status";
+import GuessForm from "../GuessForm/GuessForm";
+import LengthSelector from "../LengthSelector/LengthSelector";
+import Answers from "../Answers/Answers";
+import ActionButton from "../ActionButton/ActionButton";
+import Counter from "../Counter/Counter";
+import Word from "../Word/Word";
+import Status from "../Status";
 import "./Anagram.css";
 
 const Anagram = () => {
