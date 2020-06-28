@@ -5,7 +5,7 @@ import "./ActionButton.css";
 const ActionButton = ({ label, action, disabled }) => {
   return (
     <button
-      class="game-button"
+      className="game-button"
       onClick={action}
       disabled={disabled ? disabled : false}
     >

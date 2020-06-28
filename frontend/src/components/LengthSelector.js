@@ -14,26 +14,30 @@ const LengthSelector = ({
   };
 
   return (
-    <div class="selector">
+    <div className="selector">
       <form>
-        <label class="selector-text selector-title">Current Word Length</label>
+        <label className="selector-text selector-title">
+          Current Word Length
+        </label>
         <div>
-          <output class="selector-text selector-value"> {currentLength}</output>
+          <output className="selector-text selector-value">
+            {" "}
+            {currentLength}
+          </output>
         </div>
-        <output class="selector-text selector-max-min">{minLength} </output>
+        <output className="selector-text selector-max-min">{minLength} </output>
         <input
           name="lengthPicker"
           data-testid="lengthInput"
           onChange={setNewLength}
           type="range"
           step="1"
-          defaultValue={currentLength}
           value={currentLength}
           min={minLength}
           max={maxLength}
           required
         />
-        <output class="selector-text selector-max-min"> {maxLength}</output>
+        <output className="selector-text selector-max-min"> {maxLength}</output>
       </form>
     </div>
   );

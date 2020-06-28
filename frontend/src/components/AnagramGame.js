@@ -7,7 +7,7 @@ const AnagramGame = () => {
   const gameName = "Anagram";
 
   return (
-    <div class="game">
+    <div className="game">
       <Header gameName={gameName} />
       <Anagram />
     </div>

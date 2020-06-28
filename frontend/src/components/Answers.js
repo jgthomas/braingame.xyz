@@ -6,9 +6,9 @@ const Answers = ({ answers, showAnswers }) => {
   const answerString = answers.join(", ");
 
   if (showAnswers) {
-    return <p class="answer-word">{answerString}</p>;
+    return <p className="answer-word">{answerString}</p>;
   } else {
-    return <p class="answer-word hidden-answers">{answerString}</p>;
+    return <p className="answer-word hidden-answers">{answerString}</p>;
   }
 };
 
