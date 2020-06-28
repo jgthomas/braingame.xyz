@@ -7,6 +7,7 @@ import Counter from "./Counter";
 import "./Anagram.css";
 
 const Anagram = () => {
+  const anagramEndpoint = "/backend/anagram";
   const defaultLength = 7;
   const tick = "\u2713";
   const cross = "\u2717";
@@ -25,7 +26,7 @@ const Anagram = () => {
   const [fetches, triggerFetch] = useState(0);
 
   useEffect(() => {
-    fetch(`/backend/anagram?length=${length}`)
+    fetch(`${anagramEndpoint}?length=${length}`)
       .then((res) => res.json())
       .then((data) => {
         setShowAnswer(false);
