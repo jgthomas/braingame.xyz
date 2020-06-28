@@ -1,5 +1,5 @@
 import React from "react";
-import { render, cleanup, getByTestId } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import Counter from "./Counter";
 import Status from "../../signals/Status";
 
