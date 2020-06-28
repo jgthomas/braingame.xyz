@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import Status from "./Status";
 import "./Counter.css";
 
-const Counter = ({ value, colorClass, title }) => {
-  const setStyleOnStatus = () => {
-    switch (colorClass) {
+const Counter = ({ value, status, title }) => {
+  const setStyleOnStatus = (status) => {
+    switch (status) {
       case Status.GOOD:
         return "score";
       case Status.BAD:
@@ -16,7 +16,7 @@ const Counter = ({ value, colorClass, title }) => {
   };
 
   return (
-    <p class={`counter ${setStyleOnStatus()}`}>
+    <p class={`counter ${setStyleOnStatus(status)}`}>
       {title} {value}
     </p>
   );

@@ -99,8 +99,8 @@ const Anagram = () => {
         />
       </div>
       <div class="scores">
-        <Counter value={score} colorClass={Status.GOOD} title={tick} />
-        <Counter value={passCount} colorClass={Status.BAD} title={cross} />
+        <Counter value={score} status={Status.GOOD} title={tick} />
+        <Counter value={passCount} status={Status.BAD} title={cross} />
       </div>
     </div>
   );
