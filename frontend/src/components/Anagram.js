@@ -3,8 +3,8 @@ import GuessForm from "./GuessForm";
 import LengthSelector from "./LengthSelector";
 import Answers from "./Answers";
 import ActionButton from "./ActionButton";
-import Counter from "./Counter";
-import Word from "./Word";
+import Counter from "./Counter/Counter";
+import Word from "./Word/Word";
 import Status from "./Status";
 import "./Anagram.css";
 

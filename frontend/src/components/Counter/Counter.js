@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Status from "./Status";
+import Status from "../Status";
 import "./Counter.css";
 
 const Counter = ({ value, status, title }) => {
