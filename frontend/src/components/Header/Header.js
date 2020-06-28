@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = ({ gameName }) => {
   return (
     <header>
-      <p className="game-title">{gameName}</p>
+      <h1 className="game-title">{gameName}</h1>
     </header>
   );
 };
