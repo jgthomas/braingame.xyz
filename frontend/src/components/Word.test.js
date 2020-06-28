@@ -1,11 +1,13 @@
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, cleanup } from "@testing-library/react";
 import Word from "./Word";
-import { act } from "react-dom/test-utils";
+
+afterEach(cleanup);
 
 describe("Word Component", () => {
   it("should display the passed word", () => {
     const expectedWord = "doglets";
-    const { getByText } = render(<Word word={expectedWord} />);
+    const { getByTestId } = render(<Word word={expectedWord} />);
+    expect(getByTestId("word-display")).toHaveTextContent(expectedWord);
   });
 });

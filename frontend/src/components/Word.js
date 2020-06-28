@@ -3,7 +3,11 @@ import PropTypes from "prop-types";
 import "./Word.css";
 
 const Word = ({ word }) => {
-  return <div className="word">{word}</div>;
+  return (
+    <div className="word" data-testid="word-display">
+      {word}
+    </div>
+  );
 };
 
 Word.propTypes = {
