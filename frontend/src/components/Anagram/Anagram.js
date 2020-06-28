@@ -5,7 +5,7 @@ import Answers from "../Answers/Answers";
 import ActionButton from "../ActionButton/ActionButton";
 import Counter from "../Counter/Counter";
 import Word from "../Word/Word";
-import Status from "../Status";
+import Status from "../../signals/Status";
 import "./Anagram.css";
 
 const Anagram = () => {
