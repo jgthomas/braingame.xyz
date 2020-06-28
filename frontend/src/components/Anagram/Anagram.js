@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Game from "../Game/Game";
 import GuessForm from "../GuessForm/GuessForm";
 import LengthSelector from "../LengthSelector/LengthSelector";
 import Answers from "../Answers/Answers";
@@ -108,4 +109,4 @@ const Anagram = () => {
   );
 };
 
-export default Anagram;
+export default Game(Anagram, "Anagram");
