@@ -15,9 +15,10 @@ const Anagram = () => {
   const cross = "\u2717";
   const minWordLength = 5;
   const maxWordLength = 12;
+  const nonBreakingSpace = String.fromCharCode(160);
 
   const [length, setLength] = useState(defaultLength);
-  const [anagram, setAnagram] = useState("");
+  const [anagram, setAnagram] = useState(nonBreakingSpace);
   const [solutions, setSolutions] = useState([]);
   const [score, setScore] = useState(0);
   const [showAnswer, setShowAnswer] = useState(false);
