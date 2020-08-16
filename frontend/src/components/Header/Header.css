@@ -1,0 +1,16 @@
+header {
+  background-color: cornflowerblue;
+  margin-top: 0;
+}
+
+.game-title {
+  color: cornsilk;
+  font-size: 3.5em;
+  margin-top: 0.15em;
+}
+
+@media only screen and (max-width: 730px) {
+  .game-title {
+    font-size: 3em;
+  }
+}

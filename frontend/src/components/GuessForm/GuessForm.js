@@ -1,4 +1,6 @@
 import React from "react";
+import PropTypes from "prop-types";
+import "./GuessForm.css";
 
 const GuessForm = ({ solutions, incrementScore, disabled }) => {
   const checkAnswer = (event) => {
@@ -11,7 +13,6 @@ const GuessForm = ({ solutions, incrementScore, disabled }) => {
 
   return (
     <input
-      id="guess"
       type="text"
       name="unscrambled"
       placeholder="solve..."
@@ -19,6 +20,12 @@ const GuessForm = ({ solutions, incrementScore, disabled }) => {
       onInput={checkAnswer}
     />
   );
+};
+
+GuessForm.propTypes = {
+  solutions: PropTypes.array,
+  incrementScore: PropTypes.func,
+  disabled: PropTypes.bool,
 };
 
 export default GuessForm;
