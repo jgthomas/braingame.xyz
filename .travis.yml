@@ -18,7 +18,7 @@ jobs:
     - language: node_js
       name: frontend
       node_js: node
-      before-install:
+      before_install:
         - cd frontend
       cache:
         directories:
