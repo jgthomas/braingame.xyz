@@ -12,21 +12,26 @@ jobs:
         - pip install poetry
         - poetry install
       script:
-        - poetry run pytest -s ./tests
-        - poetry run black --check ./backend
+        - poetry run pytest -s --cov=backend ./tests
         - poetry run flake8 ./backend
+        - poetry run black --check ./backend
+      after_success:
+        - codecov
     - language: node_js
       name: frontend
       node_js: node
       before_install:
         - cd frontend
+      install:
+        - yarn global add codecov
       cache:
         directories:
           - node_modules
         timeout: 3
       script:
         - yarn install
-        - yarn test
+        - yarn test --coverage
+        - codecov
         - yarn run build
     - stage: dockerhub-deploy
       if: branch = master
