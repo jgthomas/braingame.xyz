@@ -1,15 +1,15 @@
 import React from "react";
 import Navigation from "../Navigation/Navigation";
-import { SiteHeader, SiteTitle } from "./HomeStyles";
+import { HomePageBody, SiteHeader, SiteTitle } from "./HomeStyles";
 
 const Home = () => {
   return (
-    <div>
+    <HomePageBody>
       <SiteHeader>
         <SiteTitle>BrainGame XYZ</SiteTitle>
       </SiteHeader>
       <Navigation />
-    </div>
+    </HomePageBody>
   );
 };
 
