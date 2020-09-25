@@ -4,12 +4,15 @@ import Navigation from "../Navigation/Navigation";
 import HeaderStyled from "../../styles/HeaderStyled";
 import TitleStyled from "../../styles/TitleStyled";
 
+const homeBackground = "cornflowerblue";
+const homeTitle = "cornsilk";
+
 const SiteHeader = styled(HeaderStyled)`
-  background-color: cornflowerblue;
+  background-color: ${homeBackground}};
 `;
 
 const SiteTitle = styled(TitleStyled)`
-  color: cornsilk;
+  color: ${homeTitle};
 `;
 
 const Home = () => {
