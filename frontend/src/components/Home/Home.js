@@ -8,9 +8,6 @@ const Home = () => {
   return (
     <div>
       <Header gameName="BrainGame XYZ" />
-      <Switch>
-        <Route path="/anagram" component={Anagram} />
-      </Switch>
       <div>
         <ul>
           <li>
@@ -18,6 +15,9 @@ const Home = () => {
           </li>
         </ul>
       </div>
+      <Switch>
+        <Route path="/anagram" component={Anagram} />
+      </Switch>
     </div>
   );
 };
