@@ -1,15 +1,4 @@
-import React from "react";
-import Header from "../Header/Header";
+import Game from "../Game/Game";
 import Navigation from "../Navigation/Navigation";
-import "./Home.css";
 
-const Home = () => {
-  return (
-    <div>
-      <Header gameName="BrainGame XYZ" />
-      <Navigation />
-    </div>
-  );
-};
-
-export default Home;
+export default Game(Navigation, "BrainGame XYZ");
