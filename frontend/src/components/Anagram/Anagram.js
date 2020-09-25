@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Game from "../Game/Game";
+import styled from "styled-components";
 import GuessForm from "../GuessForm/GuessForm";
 import LengthSelector from "../LengthSelector/LengthSelector";
 import Answers from "../Answers/Answers";
@@ -7,7 +7,20 @@ import ActionButton from "../ActionButton/ActionButton";
 import Counter from "../Counter/Counter";
 import Word from "../Word/Word";
 import Status from "../../signals/Status";
+import HeaderStyled from "../../styles/HeaderStyled";
+import TitleStyled from "../../styles/TitleStyled";
 import "./Anagram.css";
+
+const gamePrimary = "#f5f5f5";
+const gameHeaderBackground = "#67727a";
+
+const GameHeader = styled(HeaderStyled)`
+  background-color: ${gameHeaderBackground}};
+`;
+
+const GameTitle = styled(TitleStyled)`
+  color: ${gamePrimary};
+`;
 
 const Anagram = () => {
   const anagramEndpoint = "/backend/anagram";
@@ -76,37 +89,42 @@ const Anagram = () => {
   };
 
   return (
-    <div className="game-layout">
-      <div className="controls">
-        <ActionButton label="Next" action={showNextAnagram} />
-        <ActionButton
-          label="Answer"
-          action={displaySolution}
-          disabled={disabled}
-        />
-        <ActionButton label="Reset" action={resetGame} />
-      </div>
-      <div className="anagram">
-        <Word word={anagram} />
-        <GuessForm
-          solutions={solutions}
-          incrementScore={incrementScore}
-          disabled={disabled}
-        />
-        <Answers answers={solutions} showAnswers={showAnswer} />
-        <LengthSelector
-          maxLength={maxWordLength}
-          minLength={minWordLength}
-          currentLength={length}
-          changeLength={changeLength}
-        />
-      </div>
-      <div className="scores">
-        <Counter value={score} status={Status.GOOD} title={tick} />
-        <Counter value={passCount} status={Status.BAD} title={cross} />
+    <div>
+      <GameHeader>
+        <GameTitle>Anagram</GameTitle>
+      </GameHeader>
+      <div className="game-layout">
+        <div className="controls">
+          <ActionButton label="Next" action={showNextAnagram} />
+          <ActionButton
+            label="Answer"
+            action={displaySolution}
+            disabled={disabled}
+          />
+          <ActionButton label="Reset" action={resetGame} />
+        </div>
+        <div className="anagram">
+          <Word word={anagram} />
+          <GuessForm
+            solutions={solutions}
+            incrementScore={incrementScore}
+            disabled={disabled}
+          />
+          <Answers answers={solutions} showAnswers={showAnswer} />
+          <LengthSelector
+            maxLength={maxWordLength}
+            minLength={minWordLength}
+            currentLength={length}
+            changeLength={changeLength}
+          />
+        </div>
+        <div className="scores">
+          <Counter value={score} status={Status.GOOD} title={tick} />
+          <Counter value={passCount} status={Status.BAD} title={cross} />
+        </div>
       </div>
     </div>
   );
 };
 
-export default Game(Anagram, "Anagram");
+export default Anagram;
