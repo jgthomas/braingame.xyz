@@ -1,6 +1,7 @@
 import React from "react";
-import { Link, Route, Switch } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import Header from "../Header/Header";
+import Navigation from "../Navigation/Navigation";
 import Anagram from "../Anagram/Anagram";
 import "./Home.css";
 
@@ -8,13 +9,7 @@ const Home = () => {
   return (
     <div>
       <Header gameName="BrainGame XYZ" />
-      <div>
-        <ul>
-          <li>
-            <Link to="/anagram">Anagram</Link>
-          </li>
-        </ul>
-      </div>
+      <Navigation />
       <Switch>
         <Route path="/anagram" component={Anagram} />
       </Switch>
