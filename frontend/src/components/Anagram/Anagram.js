@@ -9,9 +9,14 @@ import Word from "../Word/Word";
 import Status from "../../signals/Status";
 import HeaderStyled from "../../styles/HeaderStyled";
 import TitleStyled from "../../styles/TitleStyled";
+import PageBodyStyled from "../../styles/PageBodyStyled";
 
 const gamePrimary = "#f5f5f5";
 const gameHeaderBackground = "#67727a";
+
+const GameBody = styled(PageBodyStyled)`
+  background-color: ${gamePrimary}};
+`;
 
 const GameHeader = styled(HeaderStyled)`
   background-color: ${gameHeaderBackground}};
@@ -22,11 +27,9 @@ const GameTitle = styled(TitleStyled)`
 `;
 
 const GameLayout = styled.div`
-  background-color: #f5f5f5;
   display: grid;
   grid-template-columns: 0.33fr 1fr 0.33fr;
   grid-template-areas: "scores anagram controls";
-  height: 100vh;
 
   @media only screen and (max-width: 900px) {
     grid-template-columns: 1fr;
@@ -142,7 +145,7 @@ const Anagram = () => {
   };
 
   return (
-    <div>
+    <GameBody>
       <GameHeader>
         <GameTitle>Anagram</GameTitle>
       </GameHeader>
@@ -176,7 +179,7 @@ const Anagram = () => {
           <Counter value={passCount} status={Status.BAD} title={cross} />
         </Scores>
       </GameLayout>
-    </div>
+    </GameBody>
   );
 };
 
