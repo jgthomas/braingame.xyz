@@ -1,6 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./GuessForm.css";
+import styled from "styled-components";
+
+const Input = styled.input`
+  width: 80%;
+  padding: 15px 22px;
+  margin: 10px 5px;
+  box-sizing: border-box;
+  font-size: 1.5em;
+  color: darkslategrey;
+
+  &:focus {
+    border: 2px solid cornflowerblue;
+  }
+`;
 
 const GuessForm = ({ solutions, incrementScore, disabled }) => {
   const checkAnswer = (event) => {
@@ -12,7 +25,7 @@ const GuessForm = ({ solutions, incrementScore, disabled }) => {
   };
 
   return (
-    <input
+    <Input
       type="text"
       name="unscrambled"
       placeholder="solve..."
