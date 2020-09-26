@@ -5,8 +5,8 @@ const PageDesign = {
   },
   home: {
     header: "cornflowerblue",
-    primary: "#ffeed3",
-    title: "#ffeed3",
+    primary: "cornsilk",
+    title: "cornsilk",
   },
   ladder: {
     header: "#F06449",
