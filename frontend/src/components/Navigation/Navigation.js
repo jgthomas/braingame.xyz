@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import GameLink from "../GameLink/GameLink";
+import * as Links from "../GameLink/Links";
 
 const LinkGrid = styled.div`
   display: grid;
@@ -17,23 +17,19 @@ const LinkGrid = styled.div`
   }
 `;
 
-const HomePageLink = styled(GameLink)`
+const HomePageHome = styled(Links.HomeLink)`
   font-size: 250%;
 `;
 
-const AnagramLink = styled(HomePageLink)`
-  background-color: #67727a;
-`;
-
-const HomeLink = styled(HomePageLink)`
-  background-color: cornflowerblue;
+const HomePageAnagram = styled(Links.AnagramLink)`
+  font-size: 250%;
 `;
 
 const Navigation = () => {
   return (
     <LinkGrid>
-      <HomeLink routeName="Home"></HomeLink>
-      <AnagramLink routeName="Anagram"></AnagramLink>
+      <HomePageHome routeName="Home"></HomePageHome>
+      <HomePageAnagram routeName="Anagram"></HomePageAnagram>
     </LinkGrid>
   );
 };
