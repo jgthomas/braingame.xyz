@@ -13,11 +13,23 @@ const LinkGrid = styled.div`
   margin-top: 2em;
 `;
 
+const HomePageLink = styled(GameLink)`
+  font-size: 250%;
+`;
+
+const AnagramLink = styled(HomePageLink)`
+  background-color: #67727a;
+`;
+
+const HomeLink = styled(HomePageLink)`
+  background-color: cornflowerblue;
+`;
+
 const Navigation = () => {
   return (
     <LinkGrid>
-      <GameLink routeName="Home"></GameLink>
-      <GameLink routeName="Anagram"></GameLink>
+      <HomeLink routeName="Home"></HomeLink>
+      <AnagramLink routeName="Anagram"></AnagramLink>
     </LinkGrid>
   );
 };

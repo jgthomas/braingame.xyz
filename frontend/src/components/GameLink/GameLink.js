@@ -3,14 +3,11 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const LinkHolder = styled.div`
-  background-color: slategrey;
-  text-align: center;
-`;
-
 const LinkStyled = styled(Link)`
   text-decoration: none;
   color: white;
+  background-color: black;
+  text-align: center;
 `;
 
 const urlFromRouteName = (routeName) => {
@@ -23,11 +20,9 @@ const urlFromRouteName = (routeName) => {
 
 const GameLink = ({ className, routeName }) => {
   return (
-    <LinkHolder>
-      <LinkStyled className={className} to={urlFromRouteName(routeName)}>
-        {routeName}
-      </LinkStyled>
-    </LinkHolder>
+    <LinkStyled className={className} to={urlFromRouteName(routeName)}>
+      {routeName}
+    </LinkStyled>
   );
 };
 
