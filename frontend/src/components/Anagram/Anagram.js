@@ -27,6 +27,7 @@ const GameTitle = styled(TitleStyled)`
 `;
 
 const GameLayout = styled.div`
+  background-color: ${gamePrimary}};
   display: grid;
   grid-template-columns: 0.33fr 1fr 0.33fr;
   grid-template-areas: "scores anagram controls";

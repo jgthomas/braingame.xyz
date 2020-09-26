@@ -24,7 +24,7 @@ const Home = () => {
   return (
     <HomePageBody>
       <SiteHeader>
-        <SiteTitle>BrainGame XYZ</SiteTitle>
+        <SiteTitle>BrainGame xYz</SiteTitle>
       </SiteHeader>
       <Navigation />
     </HomePageBody>
