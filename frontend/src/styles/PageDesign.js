@@ -7,6 +7,15 @@ const PageDesign = {
     header: "cornflowerblue",
     primary: "cornsilk",
   },
+  ladder: {
+    header: "#F06449",
+  },
+  grid: {
+    header: "#084887",
+  },
+  rack: {
+    header: "#F58A07",
+  },
 };
 
 export default PageDesign;

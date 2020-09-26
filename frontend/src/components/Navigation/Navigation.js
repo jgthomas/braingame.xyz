@@ -17,19 +17,31 @@ const LinkGrid = styled.div`
   }
 `;
 
-const HomePageHome = styled(Links.HomeLink)`
-  font-size: 250%;
-`;
+const homePageLinkStyle = `font-size: 250%;`;
 
 const HomePageAnagram = styled(Links.AnagramLink)`
-  font-size: 250%;
+  ${homePageLinkStyle}
+`;
+
+const HomePageLadder = styled(Links.LadderLink)`
+  ${homePageLinkStyle}
+`;
+
+const HomePageGrid = styled(Links.GridLink)`
+  ${homePageLinkStyle}
+`;
+
+const HomePageRack = styled(Links.RackLink)`
+  ${homePageLinkStyle}
 `;
 
 const Navigation = () => {
   return (
     <LinkGrid>
-      <HomePageHome routeName="Home"></HomePageHome>
       <HomePageAnagram routeName="Anagram"></HomePageAnagram>
+      <HomePageLadder routeName="Ladder"></HomePageLadder>
+      <HomePageGrid routeName="Grid"></HomePageGrid>
+      <HomePageRack routeName="Rack"></HomePageRack>
     </LinkGrid>
   );
 };
