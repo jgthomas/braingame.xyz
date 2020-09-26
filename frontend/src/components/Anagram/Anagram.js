@@ -10,24 +10,24 @@ import Status from "../../signals/Status";
 import HeaderStyled from "../../styles/HeaderStyled";
 import TitleStyled from "../../styles/TitleStyled";
 import PageBodyStyled from "../../styles/PageBodyStyled";
+import PageDesign from "../../styles/PageDesign";
 
-const gamePrimary = "#f5f5f5";
-const gameHeaderBackground = "#67727a";
+const Design = PageDesign.anagram;
 
 const GameBody = styled(PageBodyStyled)`
-  background-color: ${gamePrimary}};
+  background-color: ${Design.light}};
 `;
 
 const GameHeader = styled(HeaderStyled)`
-  background-color: ${gameHeaderBackground}};
+  background-color: ${Design.dark}};
 `;
 
 const GameTitle = styled(TitleStyled)`
-  color: ${gamePrimary};
+  color: ${Design.light};
 `;
 
 const GameLayout = styled.div`
-  background-color: ${gamePrimary}};
+  background-color: ${Design.light}};
   display: grid;
   grid-template-columns: 0.33fr 1fr 0.33fr;
   grid-template-areas: "scores anagram controls";
