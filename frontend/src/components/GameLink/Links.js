@@ -21,3 +21,11 @@ export const GridLink = styled(GameLink)`
 export const RackLink = styled(GameLink)`
   background-color: ${PageDesign.rack.header};
 `;
+
+export const SudokuLink = styled(GameLink)`
+  background-color: ${PageDesign.sudoku.header};
+`;
+
+export const NoughtsLink = styled(GameLink)`
+  background-color: ${PageDesign.noughts.header};
+`;

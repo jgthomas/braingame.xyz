@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 const PageBodyStyled = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  max-height: 200vh;
 `;
 
 export default PageBodyStyled;

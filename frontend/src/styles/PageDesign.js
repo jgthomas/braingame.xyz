@@ -7,6 +7,7 @@ const PageDesign = {
     header: "cornflowerblue",
     primary: "cornsilk",
     title: "cornsilk",
+    section: "slategrey",
   },
   ladder: {
     header: "#F06449",
@@ -16,6 +17,12 @@ const PageDesign = {
   },
   rack: {
     header: "#F58A07",
+  },
+  sudoku: {
+    header: "#4F9D69",
+  },
+  noughts: {
+    header: "#777DA7",
   },
 };
 

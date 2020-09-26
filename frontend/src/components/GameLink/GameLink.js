@@ -15,7 +15,7 @@ const urlFromRouteName = (routeName) => {
     return "/";
   }
 
-  return `/${routeName.toLowerCase()}`;
+  return `/${routeName.toLowerCase().replaceAll(" ", "_")}`;
 };
 
 const GameLink = ({ className, routeName }) => {
