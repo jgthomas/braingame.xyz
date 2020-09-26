@@ -10,10 +10,16 @@ const Design = PageDesign.home;
 
 const SiteHeader = styled(HeaderStyled)`
   background-color: ${Design.header}};
+  width: 50%;
+  margin: auto;
+
+  @media only screen and (max-width: 900px) {
+    width: 75%;
+  }
 `;
 
 const SiteTitle = styled(TitleStyled)`
-  color: ${Design.primary};
+  color: ${Design.title};
 `;
 
 const HomePageBody = styled(PageBodyStyled)`
@@ -24,7 +30,7 @@ const Home = () => {
   return (
     <HomePageBody>
       <SiteHeader>
-        <SiteTitle>BrainGame xYz</SiteTitle>
+        <SiteTitle>BrainGame</SiteTitle>
       </SiteHeader>
       <Navigation />
     </HomePageBody>
