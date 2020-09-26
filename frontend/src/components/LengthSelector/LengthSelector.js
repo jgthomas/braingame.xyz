@@ -1,6 +1,30 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import "./LengthSelector.css";
+
+const Selector = styled.div`
+  margin-top: 4em;
+  width: 100%;
+`;
+
+const SelectorLabel = styled.label`
+  color: lightslategray;
+  font-size: 1.5em;
+  display: block;
+`;
+
+const Output = styled.output`
+  color: lightslategray;
+`;
+
+const OutputRange = styled(Output)`
+  font-size: 1.25em;
+`;
+
+const OutputCurrent = styled(Output)`
+  font-size: 3em;
+`;
 
 const LengthSelector = ({
   minLength,
@@ -14,18 +38,13 @@ const LengthSelector = ({
   };
 
   return (
-    <div className="selector">
+    <Selector>
       <form>
-        <label className="selector-text selector-title">
-          Current Word Length
-        </label>
+        <SelectorLabel>Current Word Length</SelectorLabel>
         <div>
-          <output className="selector-text selector-value">
-            {" "}
-            {currentLength}
-          </output>
+          <OutputCurrent> {currentLength}</OutputCurrent>
         </div>
-        <output className="selector-text selector-max-min">{minLength} </output>
+        <OutputRange>{minLength} </OutputRange>
         <input
           name="lengthPicker"
           data-testid="lengthInput"
@@ -37,9 +56,9 @@ const LengthSelector = ({
           max={maxLength}
           required
         />
-        <output className="selector-text selector-max-min"> {maxLength}</output>
+        <OutputRange> {maxLength}</OutputRange>
       </form>
-    </div>
+    </Selector>
   );
 };
 
