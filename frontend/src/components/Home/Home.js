@@ -4,20 +4,20 @@ import Navigation from "../Navigation/Navigation";
 import HeaderStyled from "../../styles/HeaderStyled";
 import TitleStyled from "../../styles/TitleStyled";
 import PageBodyStyled from "../../styles/PageBodyStyled";
+import PageDesign from "../../styles/PageDesign";
 
-const homePrimary = "cornsilk";
-const homeBackground = "cornflowerblue";
+const Design = PageDesign.home;
 
 const SiteHeader = styled(HeaderStyled)`
-  background-color: ${homeBackground}};
+  background-color: ${Design.header}};
 `;
 
 const SiteTitle = styled(TitleStyled)`
-  color: ${homePrimary};
+  color: ${Design.primary};
 `;
 
 const HomePageBody = styled(PageBodyStyled)`
-  background-color: ${homePrimary};
+  background-color: ${Design.primary};
 `;
 
 const Home = () => {
