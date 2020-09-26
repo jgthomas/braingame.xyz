@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import styled from "styled-components";
 import GuessForm from "../GuessForm/GuessForm";
 import LengthSelector from "../LengthSelector/LengthSelector";
 import Answers from "../Answers/Answers";
@@ -6,8 +7,20 @@ import ActionButton from "../ActionButton/ActionButton";
 import Counter from "../Counter/Counter";
 import Word from "../Word/Word";
 import Status from "../../signals/Status";
-import { GameHeader, GameTitle } from "./AnagramStyles";
+import HeaderStyled from "../../styles/HeaderStyled";
+import TitleStyled from "../../styles/TitleStyled";
 import "./Anagram.css";
+
+const gamePrimary = "#f5f5f5";
+const gameHeaderBackground = "#67727a";
+
+const GameHeader = styled(HeaderStyled)`
+  background-color: ${gameHeaderBackground}};
+`;
+
+const GameTitle = styled(TitleStyled)`
+  color: ${gamePrimary};
+`;
 
 const Anagram = () => {
   const anagramEndpoint = "/backend/anagram";
