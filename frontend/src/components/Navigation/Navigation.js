@@ -1,18 +1,24 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import styled from "styled-components";
+import GameLink from "../GameLink/GameLink";
+
+const LinkGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2%;
+  align-items: stretch;
+  width: 80%;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 2em;
+`;
 
 const Navigation = () => {
   return (
-    <div>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/anagram">Anagram</Link>
-        </li>
-      </ul>
-    </div>
+    <LinkGrid>
+      <GameLink routeName="Home"></GameLink>
+      <GameLink routeName="Anagram"></GameLink>
+    </LinkGrid>
   );
 };
 
