@@ -9,7 +9,6 @@ import Word from "../Word/Word";
 import Status from "../../signals/Status";
 import HeaderStyled from "../../styles/HeaderStyled";
 import TitleStyled from "../../styles/TitleStyled";
-import "./Anagram.css";
 
 const gamePrimary = "#f5f5f5";
 const gameHeaderBackground = "#67727a";
@@ -20,6 +19,60 @@ const GameHeader = styled(HeaderStyled)`
 
 const GameTitle = styled(TitleStyled)`
   color: ${gamePrimary};
+`;
+
+const GameLayout = styled.div`
+  background-color: #f5f5f5;
+  display: grid;
+  grid-template-columns: 0.33fr 1fr 0.33fr;
+  grid-template-areas: "scores anagram controls";
+  height: 100vh;
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.25fr 1fr 0.5fr;
+    grid-template-areas:
+      "scores"
+      "anagram"
+      "controls";
+  }
+`;
+
+const Controls = styled.div`
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+`;
+
+const AnagramDisplay = styled.div`
+  grid-area: anagram;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+
+  @media only screen and (max-width: 900px) {
+    justify-items: center;
+    align-items: center;
+  }
+`;
+
+const Scores = styled.div`
+  grid-area: scores;
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (max-width: 900px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
 `;
 
 const Anagram = () => {
@@ -93,8 +146,8 @@ const Anagram = () => {
       <GameHeader>
         <GameTitle>Anagram</GameTitle>
       </GameHeader>
-      <div className="game-layout">
-        <div className="controls">
+      <GameLayout>
+        <Controls>
           <ActionButton label="Next" action={showNextAnagram} />
           <ActionButton
             label="Answer"
@@ -102,8 +155,8 @@ const Anagram = () => {
             disabled={disabled}
           />
           <ActionButton label="Reset" action={resetGame} />
-        </div>
-        <div className="anagram">
+        </Controls>
+        <AnagramDisplay>
           <Word word={anagram} />
           <GuessForm
             solutions={solutions}
@@ -117,12 +170,12 @@ const Anagram = () => {
             currentLength={length}
             changeLength={changeLength}
           />
-        </div>
-        <div className="scores">
+        </AnagramDisplay>
+        <Scores>
           <Counter value={score} status={Status.GOOD} title={tick} />
           <Counter value={passCount} status={Status.BAD} title={cross} />
-        </div>
-      </div>
+        </Scores>
+      </GameLayout>
     </div>
   );
 };
