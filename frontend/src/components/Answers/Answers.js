@@ -1,15 +1,24 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Answers.css";
+import styled from "styled-components";
+
+const AnswerDisplay = styled.p`
+  color: tomato;
+  font-size: 1.5em;
+`;
+
+const HiddenAnswerDisplay = styled(AnswerDisplay)`
+  visibility: hidden;
+`;
 
 const Answers = ({ answers, showAnswers }) => {
   const answerString = answers.join(", ");
 
   if (showAnswers) {
-    return <p className="answer-word">{answerString}</p>;
-  } else {
-    return <p className="answer-word hidden-answers">{answerString}</p>;
+    return <AnswerDisplay>{answerString}</AnswerDisplay>;
   }
+
+  return <HiddenAnswerDisplay>{answerString}</HiddenAnswerDisplay>;
 };
 
 Answers.propTypes = {
