@@ -11,6 +11,7 @@ const Design = PageDesign.home;
 const SiteHeader = styled(HeaderStyled)`
   background-color: ${Design.header}};
   width: 50%;
+  max-width: 1000px;
   margin: auto;
 
   @media only screen and (max-width: 900px) {

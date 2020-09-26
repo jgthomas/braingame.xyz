@@ -4,16 +4,17 @@ import * as Links from "../GameLink/Links";
 
 const LinkGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 5% 2%;
   align-items: stretch;
-  width: 80%;
+  width: 50%;
+  max-width: 1000px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 2em;
 
   @media only screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
+    width: 75%;
   }
 `;
 
