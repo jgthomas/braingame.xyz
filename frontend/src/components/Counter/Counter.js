@@ -1,24 +1,33 @@
 import React from "react";
 import PropTypes from "prop-types";
+import styled from "styled-components";
 import Status from "../../signals/Status";
-import "./Counter.css";
+
+const setStyleOnStatus = (status) => {
+  switch (status) {
+    case Status.GOOD:
+      return "olivedrab";
+    case Status.BAD:
+      return "tomato";
+    default:
+      return "lightslategrey";
+  }
+};
+
+const CounterDisplay = styled.div`
+  font-size: 3em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  color: ${({ status }) => setStyleOnStatus(status)};
+`;
 
 const Counter = ({ value, status, title }) => {
-  const setStyleOnStatus = (status) => {
-    switch (status) {
-      case Status.GOOD:
-        return "score";
-      case Status.BAD:
-        return "pass";
-      default:
-        return "neutral";
-    }
-  };
-
   return (
-    <div className={`counter ${setStyleOnStatus(status)}`}>
+    <CounterDisplay status={status}>
       {title} {value}
-    </div>
+    </CounterDisplay>
   );
 };
 

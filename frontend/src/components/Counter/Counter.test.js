@@ -8,7 +8,6 @@ afterEach(cleanup);
 describe("Counter Component", () => {
   it("should display the count using the correct style", () => {
     const expectedValue = 8;
-    const expectedStyle = "score";
     const expectedTitle = "Score";
     const expectedContents = `${expectedTitle} ${expectedValue}`;
 
@@ -21,6 +20,5 @@ describe("Counter Component", () => {
     );
 
     expect(getByText(expectedContents)).toBeInTheDocument();
-    expect(getByText(expectedContents)).toHaveClass(expectedStyle);
   });
 });
