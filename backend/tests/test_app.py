@@ -5,7 +5,14 @@ from backend.app import app
 client = TestClient(app)
 
 
-def test_anagram_endpoint():
+def test_anagram_endpoint_default_length():
+    response = client.get("/anagram")
+    data = response.json()
+    assert response.status_code == 200
+    assert len(data["word"]) == 7
+
+
+def test_anagram_endpoint_explicit_length_request():
     response = client.get("/anagram?length=8")
     data = response.json()
     assert response.status_code == 200
