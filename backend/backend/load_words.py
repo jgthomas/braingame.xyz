@@ -20,7 +20,7 @@ def load_nine_letter_words():
 @cached(cache)
 def load_words(filename):
     with open(filename) as f:
-        return [word.strip() for word in f if word]
+        return [word.strip() for word in f if word.strip()]
 
 
 def load_common_by_length():
