@@ -1,20 +1,8 @@
 from cachetools import cached, LRUCache
-from backend.file_paths import NINE_LETTER_WORDS, DICTIONARY, COMMON_WORDS
+from backend.file_paths import DICTIONARY, COMMON_WORDS
 
 
 cache = LRUCache(maxsize=100)
-
-
-def load_all_words():
-    return load_words(DICTIONARY)
-
-
-def load_common_words():
-    return load_words(COMMON_WORDS)
-
-
-def load_nine_letter_words():
-    return load_words(NINE_LETTER_WORDS)
 
 
 @cached(cache)
