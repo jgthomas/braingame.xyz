@@ -1,19 +1,21 @@
 import os
 
 CONTAINER_ROOT = "/app/backend"
+CONTAINER_PATH = "static/wordlist"
+LOCAL_PATH = "backend/static/wordlist"
 
 current_root = os.path.dirname(os.path.realpath("__file__"))
 
 local = {
-    "nine": "backend/static/wordlist/nine_letter_words.txt",
-    "dict": "backend/static/wordlist/sowpods.txt",
-    "common": "backend/static/wordlist/50k.txt",
+    "nine": f"{LOCAL_PATH}/nine_letter_words.txt",
+    "dict": f"{LOCAL_PATH}/sowpods.txt",
+    "common": f"{LOCAL_PATH}/50k.txt",
 }
 
 container = {
-    "nine": "static/wordlist/nine_letter_words.txt",
-    "dict": "static/wordlist/sowpods.txt",
-    "common": "static/wordlist/50k.txt",
+    "nine": f"{CONTAINER_PATH}/nine_letter_words.txt",
+    "dict": f"{CONTAINER_PATH}/sowpods.txt",
+    "common": f"{CONTAINER_PATH}/50k.txt",
 }
 
 
