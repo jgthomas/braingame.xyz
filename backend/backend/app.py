@@ -1,19 +1,14 @@
-from flask import Flask, request
-from flask_restful import Resource, Api
+from fastapi import FastAPI
 
 from backend.anagram import anagram_puzzle
 
 
 def create_app():
-    app = Flask(__name__)
-    api = Api(app)
+    app = FastAPI()
 
-    class Anagram(Resource):
-        def get(self):
-            length = request.args.get("length", default=9, type=int)
-            anagram, solutions = anagram_puzzle(length)
-            return {"word": anagram, "solutions": solutions}
-
-    api.add_resource(Anagram, "/anagram")
+    @app.get("/anagram")
+    def anagram(length: int):
+        anagram, solutions = anagram_puzzle(length)
+        return {"word": anagram, "solutions": solutions}
 
     return app
