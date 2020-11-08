@@ -10,6 +10,7 @@ def test_anagram_endpoint_default_length():
     data = response.json()
     assert response.status_code == 200
     assert len(data["word"]) == 7
+    assert len(data["solutions"]) > 0
 
 
 def test_anagram_endpoint_explicit_length_request():
@@ -17,3 +18,4 @@ def test_anagram_endpoint_explicit_length_request():
     data = response.json()
     assert response.status_code == 200
     assert len(data["word"]) == 8
+    assert len(data["solutions"]) > 0
