@@ -1,9 +1,5 @@
 from cachetools import cached, LRUCache
-
-
-NINE_LETTER_WORDS = "static/wordlist/nine_letter_words.txt"
-DICTIONARY = "static/wordlist/sowpods.txt"
-COMMON_WORDS = "static/wordlist/50k.txt"
+from backend.file_paths import NINE_LETTER_WORDS, DICTIONARY, COMMON_WORDS
 
 
 cache = LRUCache(maxsize=100)
