@@ -6,9 +6,6 @@ authors = ["James Thomas <codeactor@protonmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-flask = "^1.1.2"
-flask-restful = "^0.3.8"
-waitress = "^1.4.3"
 cachetools = "^4.1.0"
 pyfunctory = {git = "https://github.com/jgthomas/pyfunctory"}
 fastapi = "^0.61.2"
