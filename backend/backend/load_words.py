@@ -36,7 +36,7 @@ def load_words_by_length(filename):
     word_length_dictionary = {}
     with open(filename) as f:
         for line in f:
-            if not line:
+            if not line.strip():
                 continue
             word = line.strip()
             word_length = len(word)
