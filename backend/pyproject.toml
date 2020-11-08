@@ -12,7 +12,8 @@ waitress = "^1.4.3"
 cachetools = "^4.1.0"
 pyfunctory = {git = "https://github.com/jgthomas/pyfunctory"}
 fastapi = "^0.61.2"
-uvicorn = "^0.12.2"
+gunicorn = "^20.0.4"
+uvicorn = {extras = ["standard"], version = "^0.12.2"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
